@@ -60,11 +60,16 @@
     </form>
 
     <?php
-    echo '<h1>';
-    echo $hotels[0]["name"];
-    echo '</h1>';
-    echo "<p> Description:{$hotels[0]["description"]}, parking: {$hotels[0]["parking"]}, vote: {$hotels[0]["vote"]} </p>";
-    echo "<p> distance from center: {$hotels[0]["distance_to_center"]} km </p>";
+
+    foreach ($hotels as $hotel) {
+        echo '<h1>';
+        echo $hotel["name"];
+        echo '</h1>';
+        echo "<p> Description:{$hotel["description"]}, parking: {$hotel["parking"]}, vote: {$hotel["vote"]} </p>";
+        echo "<p> distance from center: {$hotel["distance_to_center"]} km </p>";
+    }
+
+
 
     ?>
 </body>
