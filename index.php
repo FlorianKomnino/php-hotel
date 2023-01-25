@@ -52,6 +52,21 @@
     ];
 
     ?>
+
+    <form action="index.php" method="GET">
+        <label for="Inserisci il nome dell'hotel che vuoi visualizzare"></label>
+        <input type="text" id="hotelName" name="hotelName">
+        <button type="submit">Filter</button>
+    </form>
+
+    <?php
+    echo '<h1>';
+    echo $hotels[0]["name"];
+    echo '</h1>';
+    echo "<p> Description:{$hotels[0]["description"]}, parking: {$hotels[0]["parking"]}, vote: {$hotels[0]["vote"]} </p>";
+    echo "<p> distance from center: {$hotels[0]["distance_to_center"]} km </p>";
+
+    ?>
 </body>
 
 </html>
